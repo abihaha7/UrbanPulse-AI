@@ -1,0 +1,27 @@
+{
+  "project": "UrbanPulse AI",
+  "model_type": "RandomForestRegressor",
+  "model_file": "urbanpulse_spatial_rf.joblib",
+  "imputer_file": "urbanpulse_spatial_imputer.joblib",
+  "target": "Aotizhongxin PM2.5 one hour ahead",
+  "forecast_horizon_hours": 1,
+  "input_features": [
+    "Aotizhongxin",
+    "Changping",
+    "Dingling",
+    "Dongsi",
+    "Guanyuan",
+    "Gucheng",
+    "Huairou",
+    "Nongzhanguan",
+    "Shunyi",
+    "Tiantan",
+    "Wanliu",
+    "Wanshouxigong"
+  ],
+  "n_features": 12,
+  "random_state": 42,
+  "n_estimators": 300,
+  "max_depth": 16,
+  "min_samples_leaf": 5
+}

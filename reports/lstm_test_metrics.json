@@ -1,0 +1,35 @@
+{
+  "experiment": "UrbanPulse AI LSTM one-hour-ahead PM2.5",
+  "station": "Aotizhongxin",
+  "lookback_hours": 24,
+  "forecast_horizon_hours": 1,
+  "input_features": [
+    "PM2.5",
+    "PM10",
+    "SO2",
+    "NO2",
+    "CO",
+    "O3",
+    "TEMP",
+    "PRES",
+    "DEWP",
+    "RAIN",
+    "WSPM"
+  ],
+  "best_validation_epoch": 17,
+  "common_test_observations": 5139,
+  "persistence": {
+    "mae": 11.027242654212882,
+    "rmse": 20.9234606247269,
+    "r2": 0.9500286265151131
+  },
+  "lstm": {
+    "mae": 11.451908906579227,
+    "rmse": 20.25569409688352,
+    "r2": 0.9531673736406041
+  },
+  "improvement_percent": {
+    "mae": -3.851064728353503,
+    "rmse": 3.191472671849645
+  }
+}

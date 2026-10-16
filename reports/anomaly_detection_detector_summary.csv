@@ -1,0 +1,6 @@
+Detector,Candidate_Count
+Rolling robust deviation,3849
+Isolation Forest,426
+Abrupt hourly change,182
+Flagged by 2+ detectors,174
+Flagged by all 3 detectors,15

@@ -1,0 +1,19 @@
+Scenario,Station_Value_Count,Below_Training_Min,Above_Training_Max,Below_P01,Above_P99
+All 12 stations: -30%,60857,1416,0,1876,300
+All 12 stations: -20%,60857,970,0,1268,629
+All 12 stations: -10%,60857,970,4,1268,1009
+All 12 stations: +10%,60857,9,34,10,1944
+All 12 stations: +20%,60857,9,81,10,2489
+All 12 stations: +30%,60857,9,167,10,3139
+Aotizhongxin only: -30%,60857,152,9,153,1377
+Aotizhongxin only: -20%,60857,120,9,121,1406
+Aotizhongxin only: -10%,60857,120,9,121,1438
+Aotizhongxin only: +10%,60857,9,14,10,1529
+Aotizhongxin only: +20%,60857,9,17,10,1582
+Aotizhongxin only: +30%,60857,9,24,10,1634
+Dingling only: -30%,60857,244,12,245,1428
+Dingling only: -20%,60857,159,12,160,1446
+Dingling only: -10%,60857,159,12,160,1470
+Dingling only: +10%,60857,9,14,10,1502
+Dingling only: +20%,60857,9,15,10,1533
+Dingling only: +30%,60857,9,24,10,1573
