@@ -15,7 +15,7 @@
   &nbsp; · &nbsp;
   <a href="https://github.com/abihaha7/UrbanPulse-AI"><strong>💻 Explore Repository</strong></a>
   &nbsp; · &nbsp;
-  <a href="assets/urbanpulse-demo.gif"><strong>▶ Watch Demo</strong></a>
+  <a href="c:\Users\HP\Downloads\urbanpulse-demo.gif"><strong>▶ Watch Demo</strong></a>
 </p>
 
 <p align="center">
@@ -81,24 +81,10 @@ The deployed spatial Random Forest uses current-hour PM2.5 measurements from 12 
 
 <p align="center">
   <img
-    src="assets/urbanpulse-demo.gif"
-    alt="UrbanPulse AI interactive dashboard walkthrough"
+    src="./assets/urbanpulse-demo.gif"
+    alt="UrbanPulse AI dashboard walkthrough"
     width="100%"
   />
-</p>
-
-<p align="center">
-  <strong>UrbanPulse AI — Air Quality Forecasting & Environmental Analytics</strong>
-</p>
-
-<p align="center">
-  <a href="https://urbanpulse-ai-ricmpfbqctszxahddfsunn.streamlit.app/">
-    <strong>🚀 Launch the Live Dashboard</strong>
-  </a>
-  &nbsp;•&nbsp;
-  <a href="https://github.com/abihaha7/UrbanPulse-AI">
-    <strong>💻 Explore the Source Code</strong>
-  </a>
 </p>
 
 ## ◈ Research Workflow
@@ -355,7 +341,7 @@ Future work could include evaluation on a fresh chronological test period, addit
   &nbsp; · &nbsp;
   <a href="https://github.com/abihaha7/UrbanPulse-AI"><strong>📦 GitHub Repository</strong></a>
   &nbsp; · &nbsp;
-  <a href="assets/urbanpulse-demo.gif"><strong>▶ Project Demo</strong></a>
+  <a href="c:\Users\HP\Downloads\urbanpulse-demo.gif"><strong>▶ Project Demo</strong></a>
 </p>
 
 UrbanPulse AI explores how data science and machine learning can support the analysis of historical urban air-quality observations through forecasting, spatial modeling, anomaly investigation, and interactive research tools.
