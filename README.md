@@ -15,7 +15,7 @@
   &nbsp; · &nbsp;
   <a href="https://github.com/abihaha7/UrbanPulse-AI"><strong>💻 Explore Repository</strong></a>
   &nbsp; · &nbsp;
-  <a href="c:\Users\HP\Downloads\urbanpulse-demo.gif"><strong>▶ Watch Demo</strong></a>
+  <a href="C:\UrbanPulse-AI\assets\urbanpulse-demo.gif"><strong>▶ Watch Demo</strong></a>
 </p>
 
 <p align="center">
@@ -77,15 +77,27 @@ The deployed dashboard brings together saved model artifacts, evaluation reports
 
 The deployed spatial Random Forest uses current-hour PM2.5 measurements from 12 Beijing monitoring stations to estimate next-hour PM2.5 at Aotizhongxin.
 
-## 🎬 Live Demo
-![UrbanPulse AI animated dashboard demo](./assets/urbanpulse-demo.gif)
+## ◈ Demo
+
 <p align="center">
-  <img
-    src="./assets/urbanpulse-demo.gif"
-    alt="UrbanPulse AI dashboard walkthrough"
-    width="100%"
-  />
+  <a href="C:\UrbanPulse-AI\assets\urbanpulse-demo.gif">
+    <img src="assets/dashboard-overview.png" alt="Click to watch the UrbanPulse AI demo" width="85%">
+  </a>
 </p>
+
+<p align="center">
+  <a href="C:\UrbanPulse-AI\assets\urbanpulse-demo.gif"><strong>▶ Watch the full UrbanPulse AI walkthrough</strong></a>
+</p>
+
+The walkthrough can demonstrate the dashboard, saved evaluation results, station-level spatial insights, anomaly summaries, and the what-if scenario engine.
+
+To add an animated preview, save a short optimized recording as `assets/urbanpulse-demo.gif` and replace the thumbnail above with:
+
+```html
+<img src="assets/urbanpulse-demo.gif" alt="Animated UrbanPulse AI dashboard walkthrough" width="85%">
+```
+
+GitHub displays GIFs inline. For the complete MP4, use a hosted video URL in the clickable thumbnail above.
 
 ## ◈ Research Workflow
 
@@ -341,7 +353,7 @@ Future work could include evaluation on a fresh chronological test period, addit
   &nbsp; · &nbsp;
   <a href="https://github.com/abihaha7/UrbanPulse-AI"><strong>📦 GitHub Repository</strong></a>
   &nbsp; · &nbsp;
-  <a href="c:\Users\HP\Downloads\urbanpulse-demo.gif"><strong>▶ Project Demo</strong></a>
+  <a href="C:\UrbanPulse-AI\assets\urbanpulse-demo.gif"><strong>▶ Project Demo</strong></a>
 </p>
 
 UrbanPulse AI explores how data science and machine learning can support the analysis of historical urban air-quality observations through forecasting, spatial modeling, anomaly investigation, and interactive research tools.
