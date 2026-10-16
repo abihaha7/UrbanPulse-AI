@@ -78,7 +78,7 @@ The deployed dashboard brings together saved model artifacts, evaluation reports
 The deployed spatial Random Forest uses current-hour PM2.5 measurements from 12 Beijing monitoring stations to estimate next-hour PM2.5 at Aotizhongxin.
 
 ## 🎬 Live Demo
-
+![UrbanPulse AI animated dashboard demo](./assets/urbanpulse-demo.gif)
 <p align="center">
   <img
     src="./assets/urbanpulse-demo.gif"
