@@ -77,27 +77,26 @@ The deployed dashboard brings together saved model artifacts, evaluation reports
 
 The deployed spatial Random Forest uses current-hour PM2.5 measurements from 12 Beijing monitoring stations to estimate next-hour PM2.5 at Aotizhongxin.
 
+
 ## ◈ Demo
 
 <p align="center">
-  <a href="C:\UrbanPulse-AI\assets\urbanpulse-demo.gif">
-    <img src="assets/dashboard-overview.png" alt="Click to watch the UrbanPulse AI demo" width="85%">
-  </a>
+  <img
+    src="./assets/urbanpulse-demo.gif"
+    alt="Animated UrbanPulse AI dashboard walkthrough"
+    width="85%"
+  >
 </p>
 
 <p align="center">
-  <a href="C:\UrbanPulse-AI\assets\urbanpulse-demo.gif"><strong>▶ Watch the full UrbanPulse AI walkthrough</strong></a>
+  <a href="https://raw.githubusercontent.com/abihaha7/UrbanPulse-AI/main/assets/urbanpulse-demo.gif">
+    <strong>▶ Watch the full UrbanPulse AI walkthrough</strong>
+  </a>
 </p>
 
-The walkthrough can demonstrate the dashboard, saved evaluation results, station-level spatial insights, anomaly summaries, and the what-if scenario engine.
+The walkthrough demonstrates the dashboard, saved evaluation results, station-level spatial insights, anomaly summaries, and the what-if scenario engine.
 
-To add an animated preview, save a short optimized recording as `assets/urbanpulse-demo.gif` and replace the thumbnail above with:
-
-```html
-<img src="assets/urbanpulse-demo.gif" alt="Animated UrbanPulse AI dashboard walkthrough" width="85%">
-```
-
-GitHub displays GIFs inline. For the complete MP4, use a hosted video URL in the clickable thumbnail above.
+**Note:** The animated preview above plays directly in GitHub when supported by the viewer. Click the link to open the full GIF separately.
 
 ## ◈ Research Workflow
 
