@@ -1,184 +1,367 @@
-# UrbanPulse AI
+# 🌫️ UrbanPulse AI
 
-### Intelligent Air Quality Analysis & One-Hour-Ahead PM2.5 Forecasting
+<p align="center">
+  <img src="assets/urbanpulse-banner.png" alt="UrbanPulse AI — Environmental Intelligence and Air Quality Forecasting" width="100%">
+</p>
 
-UrbanPulse AI is an end-to-end data science project exploring how historical air-quality measurements, meteorological conditions, and temporal patterns can support short-term PM2.5 forecasting. It combines exploratory data analysis, feature engineering, machine learning, baseline comparisons, and pollution-level error analysis.
+<h3 align="center">Environmental Intelligence Through Machine Learning</h3>
 
-The goal is not simply to produce a prediction, but to understand when a model performs well, where its errors increase, and why forecasting extreme pollution remains challenging.
+<p align="center">
+  An AI-powered research platform for air-quality forecasting, multi-station analysis, anomaly detection, explainability, and interactive what-if scenarios.
+</p>
+
+<p align="center">
+  <a href="https://urbanpulse-ai-ricmpfbqctszxahddfsunn.streamlit.app/"><strong>🚀 Launch Live Dashboard</strong></a>
+  &nbsp; · &nbsp;
+  <a href="https://github.com/abihaha7/UrbanPulse-AI"><strong>💻 Explore Repository</strong></a>
+  &nbsp; · &nbsp;
+  <a href="c:\Users\HP\Downloads\urbanpulse-demo.gif"><strong>▶ Watch Demo</strong></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Domain-Environmental%20AI-0F766E?style=for-the-badge" alt="Environmental AI">
+  <img src="https://img.shields.io/badge/Machine%20Learning-Random%20Forest-0E7490?style=for-the-badge" alt="Random Forest">
+  <img src="https://img.shields.io/badge/Deep%20Learning-LSTM-155E75?style=for-the-badge" alt="LSTM">
+  <img src="https://img.shields.io/badge/Interface-Streamlit-0F766E?style=for-the-badge" alt="Streamlit">
+</p>
 
 ---
 
-## Project Highlights
+## ◈ Project Overview
 
-- **Air quality exploration:** Analyze pollutant distributions, hourly patterns, seasonal changes, and weather relationships.
-- **Time-aware forecasting:** Predict PM2.5 concentration one hour ahead using a chronological evaluation strategy.
-- **Feature engineering:** Use temporal and cyclical features alongside pollutant and meteorological variables.
-- **Model comparison:** Evaluate direct Random Forest, weighted Random Forest, change-based Random Forest, and a persistence baseline.
-- **Error investigation:** Compare performance across concentration bands and examine high-pollution episodes.
-- **Reproducible reporting:** Save evaluation tables, a comparison chart, and the experimental methodology.
+**UrbanPulse AI** is an end-to-end data science and machine learning research project investigating how historical air-quality observations from multiple monitoring stations can support short-term PM2.5 forecasting.
 
-## Dataset
+Built using the [Beijing Multi-Site Air Quality dataset](https://archive.ics.uci.edu/dataset/501/beijing+multi+site+air+quality+data) from the UCI Machine Learning Repository, the project brings together exploratory data analysis, feature engineering, classical machine learning, deep learning experiments, anomaly detection, spatial analysis, explainability, and interactive scenario exploration.
 
-This project uses the [Beijing Multi-Site Air Quality dataset from the UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/501/beijing+multi+site+air+quality+data). The current modeling experiments focus on the **Aotizhongxin monitoring station**, with hourly observations from March 2013 through February 2017.
+Rather than evaluating prediction accuracy alone, UrbanPulse AI also investigates forecasting errors, relationships between monitoring stations, and the response of a trained model to hypothetical changes in station-level pollution measurements.
 
-The dataset includes:
-- **Pollutants:** PM2.5, PM10, SO2, NO2, CO, and O3.
-- **Meteorological measurements:** Temperature, pressure, dew point, rainfall, and wind speed.
-- **Temporal information:** Hour, day of the week, and month.
+> **Research prototype:** Predictions and what-if outputs are exploratory model results. They are not causal estimates, official air-quality alerts, or validated public-health forecasts.
 
-The results describe this station and historical period; they should not automatically be generalized to other locations or time periods.
+## ◈ At a Glance
 
-## Forecasting Objective
-
-**Task:** Estimate PM2.5 concentration at the next hour.
-
-The target is created by shifting the observed PM2.5 series one hour into the future. The prediction is evaluated against that next-hour observation, while the persistence baseline uses the current-hour PM2.5 reading as its forecast.
-
-### Workflow
-
-1. Inspect the dataset and assess missing observations.
-2. Clean and prepare the station-level time series.
-3. Explore pollutant distributions, hourly patterns, seasonal variation, and weather relationships.
-4. Engineer temporal and cyclical predictors.
-5. Split the data chronologically into training, validation, and test periods.
-6. Fit median imputation on training predictors and apply it to subsequent partitions.
-7. Train and compare forecasting models.
-8. Evaluate overall performance and investigate errors at higher PM2.5 concentrations.
-
-Chronological splitting helps assess forecasting on later observations without randomly mixing past and future records.
-
-## Models Evaluated
-
-| Model | Approach |
+| Project attribute | Details |
 |---|---|
-| Persistence baseline | Uses current-hour PM2.5 as the next-hour forecast. |
-| Original Random Forest | Predicts next-hour PM2.5 directly. |
-| Weighted Random Forest | Uses larger training weights for higher PM2.5 targets. |
-| Change-based Random Forest | Predicts the next-hour change in PM2.5 and adds it to the current reading. |
+| Domain | Environmental analytics and applied AI |
+| Primary target | PM2.5 concentration |
+| Forecast horizon | One hour ahead |
+| Target monitoring station | Aotizhongxin, Beijing |
+| Spatial coverage | 12 monitoring stations |
+| Dataset period | March 2013 – February 2017 |
+| Machine learning | Random Forest and persistence baselines |
+| Deep learning | LSTM time-series experiment |
+| Interactive application | Streamlit Community Cloud |
+| Dataset source | UCI Machine Learning Repository |
 
-The Random Forest experiments used 100 trees, a maximum depth of 20, and a minimum leaf size of 2. The weighted model used target-based sample weights; the change-based model learned the difference between consecutive PM2.5 readings.
+## ◈ Explore the Live Application
 
-## Test Results
+<p align="center">
+  <a href="https://urbanpulse-ai-ricmpfbqctszxahddfsunn.streamlit.app/">
+    <img src="assets/dashboard-overview.png" alt="UrbanPulse AI live dashboard preview" width="100%">
+  </a>
+</p>
 
-The following results were calculated on **5,223 common test timestamps**, enabling a like-for-like comparison across the three models.
+<p align="center">
+  <a href="https://urbanpulse-ai-ricmpfbqctszxahddfsunn.streamlit.app/"><strong>Open the interactive dashboard →</strong></a>
+</p>
 
-| Model | MAE (µg/m³) | RMSE (µg/m³) | R² |
+The deployed dashboard brings together saved model artifacts, evaluation reports, spatial analysis, anomaly-detection results, and interactive scenario predictions.
+
+| Dashboard section | Capabilities |
+|---|---|
+| **Project Overview** | Research objectives, historical coverage, and available reports |
+| **Model Evaluation** | Saved forecasting metrics and diagnostic results |
+| **Spatial Analysis** | Inter-station PM2.5 correlations and model-based feature importance |
+| **Anomaly Detection** | Detector summaries, monthly patterns, and flagged observations |
+| **What-If Explorer** | Modify hypothetical station inputs and inspect conditional predictions |
+| **Research Limitations** | Model assumptions, generalization risks, and responsible-use guidance |
+
+The deployed spatial Random Forest uses current-hour PM2.5 measurements from 12 Beijing monitoring stations to estimate next-hour PM2.5 at Aotizhongxin.
+
+## ◈ Demo
+
+<p align="center">
+  <a href="c:\Users\HP\Downloads\urbanpulse-demo.gif">
+    <img src="assets/dashboard-overview.png" alt="Click to watch the UrbanPulse AI demo" width="85%">
+  </a>
+</p>
+
+<p align="center">
+  <a href="c:\Users\HP\Downloads\urbanpulse-demo.gif"><strong>▶ Watch the full UrbanPulse AI walkthrough</strong></a>
+</p>
+
+The walkthrough can demonstrate the dashboard, saved evaluation results, station-level spatial insights, anomaly summaries, and the what-if scenario engine.
+
+To add an animated preview, save a short optimized recording as `assets/urbanpulse-demo.gif` and replace the thumbnail above with:
+
+```html
+<img src="assets/urbanpulse-demo.gif" alt="Animated UrbanPulse AI dashboard walkthrough" width="85%">
+```
+
+GitHub displays GIFs inline. For the complete MP4, use a hosted video URL in the clickable thumbnail above.
+
+## ◈ Research Workflow
+
+```mermaid
+flowchart TD
+    A["UCI Beijing Multi-Site Dataset"] --> B["Data Preparation & Quality Checks"]
+    B --> C["Exploratory Data Analysis"]
+    C --> D["Temporal Feature Engineering"]
+    D --> E["Single-Station Forecasting"]
+    D --> F["LSTM Time-Series Experiment"]
+    B --> G["Multi-Station Feature Construction"]
+    G --> H["Spatial Random Forest"]
+    E --> I["Evaluation & Diagnostics"]
+    F --> I
+    H --> I
+    I --> J["Explainability & Anomaly Analysis"]
+    J --> K["What-If Scenario Exploration"]
+    K --> L["Streamlit Research Dashboard"]
+```
+
+The workflow combines historical data analysis with predictive modeling and interactive exploration. Each experiment should be interpreted according to its own target definition, preprocessing, data split, and evaluation methodology.
+
+## ◈ Key Features
+
+### 01 — Exploratory Data Analysis
+- Investigates pollutant distributions and temporal patterns.
+- Examines missing observations and data quality.
+- Explores relationships between pollution and meteorological conditions.
+
+### 02 — Short-Term Forecasting
+- Establishes a persistence baseline.
+- Evaluates Random Forest forecasting approaches.
+- Uses chronological splits to better represent prediction on future observations.
+- Compares errors using MAE, RMSE, and R².
+
+### 03 — Deep Learning Experimentation
+- Explores an LSTM architecture for sequential PM2.5 prediction.
+- Investigates the potential of learning temporal dependencies from historical observations.
+- Keeps deep-learning experiments distinct from the verified classical-model comparison.
+
+### 04 — Multi-Station Spatial Modeling
+- Integrates PM2.5 readings from 12 monitoring stations.
+- Examines inter-station correlations and feature importance.
+- Uses a saved spatial Random Forest for the deployed next-hour prediction.
+
+### 05 — Anomaly Detection
+- Identifies unusual historical observations according to detector behavior.
+- Examines anomaly summaries and changes across time.
+- Treats flags as candidates for investigation, not proof of errors or emergencies.
+
+### 06 — Explainability
+- Examines model feature importance and prediction behavior.
+- Supports more transparent interpretation of model outputs.
+- Distinguishes model associations from causal relationships.
+
+### 07 — Interactive What-If Analysis
+- Allows hypothetical changes to station-level PM2.5 inputs.
+- Supports exploring individual station changes or changes across the network.
+- Displays the resulting conditional model prediction.
+
+Scenario outputs reflect the model and supplied inputs. They do not establish the real-world effect of a policy or pollution-control intervention.
+
+## ◈ Dataset & Forecasting Objective
+
+UrbanPulse AI uses the [Beijing Multi-Site Air Quality dataset](https://archive.ics.uci.edu/dataset/501/beijing+multi+site+air+quality+data), which contains hourly observations from 12 monitoring stations from March 2013 through February 2017.
+
+**Pollutant measurements**
+- PM2.5 and PM10
+- Sulfur dioxide (SO₂)
+- Nitrogen dioxide (NO₂)
+- Carbon monoxide (CO)
+- Ozone (O₃)
+
+**Meteorological measurements**
+- Temperature
+- Pressure
+- Dew point
+- Rainfall
+- Wind speed
+
+**Primary research objective:** Estimate the PM2.5 concentration at Aotizhongxin one hour after the current observation time.
+
+The spatial experiment additionally investigates whether contemporaneous PM2.5 readings from other monitoring stations provide useful predictive information for the target station.
+
+Results are specific to this historical dataset and should not be assumed to generalize to other cities, monitoring networks, or future environmental conditions.
+
+## ◈ Verified Baseline Results
+
+The original single-station experiment compared three forecasting approaches on **5,223 common test timestamps**.
+
+| Model | MAE (µg/m³) ↓ | RMSE (µg/m³) ↓ | R² ↑ |
 |---|---:|---:|---:|
 | Original Random Forest | 10.944 | 20.302 | 0.9525 |
-| Change-based Random Forest | 10.909 | 20.231 | 0.9528 |
+| Change-based Random Forest | **10.909** | **20.231** | **0.9528** |
 | Persistence baseline | 10.950 | 20.775 | 0.9503 |
 
-- **MAE** measures the average absolute prediction error.
-- **RMSE** penalizes larger errors more heavily.
-- **R²** measures the proportion of target variance explained relative to a mean-prediction reference.
+*Lower MAE and RMSE indicate smaller prediction errors; higher R² indicates better fit relative to a mean-prediction reference.*
 
-### What the Results Tell Us
+### Interpretation
 
-The change-based Random Forest achieved the best overall RMSE among these three models, but its improvement over the original Random Forest was small. The persistence baseline was also competitive, showing how difficult it can be to improve on the strong short-term continuity of air-quality measurements.
+The change-based Random Forest achieved the lowest RMSE of these three approaches, but the improvement over the original Random Forest was small. The persistence baseline remained competitive, demonstrating why simple reference models are essential when evaluating more complex forecasting approaches.
 
-Overall metrics alone do not tell the full story. Model performance changes with pollution concentration, and the model with the best average score is not necessarily the best choice during an extreme pollution episode.
+**Scope of results:** These figures belong to the original single-station experiment. They are not the evaluation metrics of the deployed multi-station model or the LSTM. Consult the corresponding experiment notebooks and reports for model-specific results.
 
-## High-Pollution Error Analysis
+The original test set was examined during multiple exploratory comparisons. Consequently, these results should not be described as a completely untouched final evaluation.
 
-Test observations were grouped into exploratory PM2.5 concentration bands to investigate how prediction errors changed as pollution increased.
+## ◈ Evaluation Metrics
 
-- Errors generally became larger at higher concentrations.
-- The change-based model improved on the original Random Forest in the extreme band above 250 µg/m³.
-- The persistence baseline nevertheless performed better than both Random Forest variants in that extreme band.
-- Random Forest predictions tended to underestimate some of the highest observed concentrations.
+| Metric | Meaning |
+|---|---|
+| **MAE** | Mean Absolute Error — average absolute prediction error |
+| **RMSE** | Root Mean Squared Error — gives greater weight to larger errors |
+| **R²** | Coefficient of Determination — compares predictions against a mean-prediction reference |
 
-These results highlight a key forecasting challenge: accurately following rapid rises and peaks can be more difficult than predicting ordinary concentration changes.
+Additional analyses investigate error variation across PM2.5 concentration bands and the difficulty of predicting extreme pollution episodes.
 
-The concentration bands are analytical groupings for this project, not official health categories. This analysis is not a validated pollution-alert system.
+## ◈ Visual Research Artifacts
 
-## Visual Results
+<p align="center">
+  <img src="assets/spatial-analysis.png" alt="UrbanPulse AI spatial analysis and station relationships" width="49%">
+  <img src="assets/anomaly-detection.png" alt="UrbanPulse AI anomaly-detection analysis" width="49%">
+</p>
 
-The following chart compares model MAE across the analyzed pollution bands:
+<p align="center">
+  <em>Replace these image placeholders with screenshots of the corresponding analyses from your actual application or notebooks.</em>
+</p>
 
-![Model MAE comparison by PM2.5 concentration band](reports/pollution_band_mae_comparison.png)
+The research artifacts complement the live dashboard by documenting the experiments and supporting the interpretation of their outputs.
 
-## Repository Structure
+## ◈ Technology Stack
+
+| Area | Technologies |
+|---|---|
+| Language | Python |
+| Data analysis | pandas, NumPy |
+| Machine learning | scikit-learn, Random Forest |
+| Deep learning | LSTM, Keras model artifact |
+| Visualization | Matplotlib, Streamlit |
+| Experimentation | Jupyter Notebook, JupyterLab |
+| Model persistence | joblib, Keras |
+| Version control | Git, GitHub |
+| Deployment | Streamlit Community Cloud |
+
+## ◈ Repository Structure
 
 ```text
 UrbanPulse-AI/
+├── app/
+│   └── app.py
+├── assets/
+│   ├── urbanpulse-banner.png
+│   ├── dashboard-overview.png
+│   ├── spatial-analysis.png
+│   ├── anomaly-detection.png
+│   └── urbanpulse-demo.gif
 ├── data/
 │   ├── raw/
-│   ├── interim/
+│   │   └── beijing/
+│   │       ├── beijing_air_quality.zip
+│   │       └── extracted/
 │   └── processed/
-├── notebooks/
-├── src/
-│   ├── data/
-│   ├── evaluation/
-│   ├── features/
-│   ├── models/
-│   └── visualization/
+│       └── spatial/
 ├── models/
+│   ├── urbanpulse_lstm_pm25.keras
+│   ├── urbanpulse_spatial_imputer.joblib
+│   ├── urbanpulse_spatial_rf.joblib
+│   └── urbanpulse_target_only_rf.joblib
+├── notebooks/
+│   ├── 01_environment_check.ipynb
+│   ├── 02_baseline_ml.ipynb
+│   ├── 03_real_data_exploration*.ipynb
+│   ├── 04_deep_learning_forecasting.ipynb
+│   ├── 05_anomaly_detection.ipynb
+│   ├── 06_spatial_modeling.ipynb
+│   ├── 07_explainability.ipynb
+│   └── 08_what_if_engine.ipynb
 ├── reports/
-│   ├── overall_model_comparison.csv
-│   ├── pollution_band_model_comparison.csv
-│   ├── extreme_pollution_model_comparison.csv
-│   ├── pollution_band_mae_comparison.png
-│   └── forecasting_methodology.md
+├── src/
+├── requirements.txt
 └── README.md
 ```
 
-## Reports and Artifacts
+This is a representative structure showing the principal components. The repository may contain additional notebooks, report files, and supporting scripts. The `assets/` filenames above are the suggested additions for the README visuals.
 
-| File | Purpose |
-|---|---|
-| `reports/overall_model_comparison.csv` | Overall model evaluation metrics. |
-| `reports/pollution_band_model_comparison.csv` | Performance across concentration bands. |
-| `reports/extreme_pollution_model_comparison.csv` | Evaluation focused on extreme pollution observations. |
-| `reports/pollution_band_mae_comparison.png` | Visual comparison of MAE across concentration bands. |
-| `reports/forecasting_methodology.md` | Experimental setup, split details, and evaluation notes. |
+## ◈ Run Locally
 
-## Limitations and Future Work
+### 1. Clone the repository
 
-- **Geographic coverage:** Current experiments focus on one Beijing monitoring station.
-- **Extreme events:** Large, rapid concentration changes remain difficult to predict.
-- **Model selection:** No single model performed best across all concentration bands.
-- **Test-set reuse:** The test set was examined during multiple exploratory experiments, so it is not a completely untouched final evaluation.
-- **Reproducibility:** A complete dependency file, verified notebook execution order, and documented setup instructions should be maintained alongside the project.
+```bash
+git clone https://github.com/abihaha7/UrbanPulse-AI.git
+cd UrbanPulse-AI
+```
 
-Potential next steps include tuning models using training and validation data, evaluating a selected model on a fresh chronological test period, testing additional monitoring stations, and comparing further time-series forecasting approaches.
+### 2. Create and activate a virtual environment
 
-## Tools and Technologies
+Python 3.12 is a suggested starting point for the local environment.
 
-- Python
-- pandas and NumPy
-- Matplotlib
-- scikit-learn
-- Jupyter Notebook / JupyterLab
-- Git and GitHub for version control
+**Windows PowerShell**
 
-## Disclaimer
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
 
-UrbanPulse AI is an experimental data science and portfolio project. It is not a validated public-health forecasting, medical guidance, or emergency-warning system.
+**Windows Command Prompt**
+
+```bat
+.venv\Scripts\activate.bat
+```
+
+### 3. Install dependencies
+
+```bash
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+### 4. Start the dashboard
+
+```bash
+python -m streamlit run app/app.py
+```
+
+Open the local URL printed by Streamlit, typically `http://localhost:8501`.
+
+The dashboard depends on the expected model artifacts, metadata, reports, and station CSVs being present in their repository locations. Preserve those paths when running the project locally.
+
+## ◈ Limitations & Responsible Use
+
+- **Historical data:** The source observations cover March 2013 through February 2017.
+- **Geographic generalization:** Results from Beijing do not establish performance in other locations.
+- **Extreme events:** Rapid pollution changes and extreme concentrations can be difficult to predict.
+- **Evaluation discipline:** The original test set was examined during exploratory model comparisons and is not a completely untouched final evaluation.
+- **Scenario analysis:** What-if outputs are conditional predictions, not causal estimates of policy interventions.
+- **Anomaly detection:** A flagged observation is not automatically erroneous or hazardous.
+- **Operational readiness:** The application is a research prototype, not a validated public-health forecasting or emergency-warning service.
+
+Future work could include evaluation on a fresh chronological test period, additional forecasting architectures, broader geographic validation, and more extensive assessment of spatial and temporal generalization.
+
+## ◈ Future Directions
+
+- Evaluate models on a fresh, strictly held-out chronological period.
+- Expand model comparisons with additional forecasting architectures.
+- Investigate temporal and spatial generalization across locations.
+- Improve uncertainty reporting and model diagnostics.
+- Extend scenario analysis while maintaining clear causal limitations.
+- Strengthen experiment reproducibility and technical documentation.
+
+## ◈ Project Links
+
+<p align="center">
+  <a href="https://urbanpulse-ai-ricmpfbqctszxahddfsunn.streamlit.app/"><strong>🌐 Live Dashboard</strong></a>
+  &nbsp; · &nbsp;
+  <a href="https://github.com/abihaha7/UrbanPulse-AI"><strong>📦 GitHub Repository</strong></a>
+  &nbsp; · &nbsp;
+  <a href="c:\Users\HP\Downloads\urbanpulse-demo.gif"><strong>▶ Project Demo</strong></a>
+</p>
+
+UrbanPulse AI explores how data science and machine learning can support the analysis of historical urban air-quality observations through forecasting, spatial modeling, anomaly investigation, and interactive research tools.
+
+Feedback on the modeling methodology, evaluation strategy, and future research directions is welcome.
 
 ---
 
-Developed as a project in air-quality analytics and machine-learning-based forecasting.
-
-## Interactive Dashboard
-
-UrbanPulse AI includes an exploratory Streamlit dashboard for viewing historical model-evaluation reports, multi-station importance, anomaly-detection outputs, and hypothetical scenario predictions.
-
-### Run locally
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-python -m streamlit run app\app.py
-```
-
-### Dashboard capabilities
-
-- Project overview and historical dataset context
-- Forecast evaluation and saved metric reports
-- Multi-station importance and correlation reports
-- Historical anomaly-detection outputs
-- Interactive what-if scenario predictions
-- Explicit research limitations and responsible-use statements
-
-### Research disclaimer
-
-UrbanPulse AI is a research prototype built using historical Beijing air-quality observations. Its forecasts and scenario outputs are exploratory model results. They should not be interpreted as official air-quality warnings or causal estimates of real-world pollution interventions.
+<p align="center">
+  <sub>UrbanPulse AI · Environmental Analytics · Machine Learning Research</sub>
+</p>
